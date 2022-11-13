@@ -47,7 +47,6 @@ class GestorApp{
     }
 
     generarHtmlRegistroBarra(barra){
-        console.log(barra)
         return `<tr>
             <td>${barra.longitud}</td>
             <td>${barra.elasticidad}</td>
@@ -55,6 +54,7 @@ class GestorApp{
             <td>${barra.altura}</td>
             <td>${barra.condicionBorde}</td>
             <td>${barra.cargaDist}</td>
+            <td><input type="button" class="waves-effect waves-light btn-small" onclick="gestorBarras.eliminarRegistroBarra('${barra._id}')" value="Borrar"></input></td>
         </tr>`
     }
 
@@ -64,6 +64,12 @@ class GestorApp{
 
             this.tablaBarras.innerHTML = html
         })
+    }
+
+    eliminarRegistroBarra(id) {
+        baseDatos.eliminarBarra(id)
+
+        this.cargarRegistroBarras()
     }
 }
 

@@ -25,3 +25,9 @@ exports.obtenerBarras = function (operacion) {
         }
     })
 }
+
+exports.eliminarBarra = function(id) {
+    db.remove({_id: id}, {}, function(err, numeroRegistrosEliminados) {
+
+    })
+}
