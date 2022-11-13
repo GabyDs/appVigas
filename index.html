@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross</title>
+
+    <!--Style-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize/css/materialize.min.css"  media="screen,projection"/>
+    
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row titulo">
+            <div class="col-auto">
+                <h1>Metodo de Cross</h1>
+            </div>
+        </div>
+        <!--
+            CREO QUE NO VA A HACER FALTA
+        <form class="row form-cant-barras">
+            <div class="col-auto">
+              <input type="text" readonly class="form-control-plaintext" value="Cantidad de Barras:">
+            </div>
+            <div class="col-auto">
+              <input type="text" class="form-control" id="input-cant-barras">
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3" id="btn-cant-barras">Confirmar</button>
+            </div>
+        </form>
+        -->
+        <div class="row">
+            <div class="col-auto">
+                <h4>Datos de la Barra</h4>
+            </div>
+            <div class="col-auto">
+                <form class="datos-barras">
+                    <div class="row">
+                        <div class="col-auto">
+                            <input type="text" class="form-control" id="long-barra" placeholder="Longitud de la barra">
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" class="form-control" id="elasticidad-barra" placeholder="Modulo de elasticidad">
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" class="form-control" id="base-barra" placeholder="Base">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-auto">
+                            <input type="text" class="form-control" id="altura-barra" placeholder="Altura">
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" class="form-control" id="carga-dist-barra" placeholder="Carga distribuida">
+                        </div>
+                        <div class="col-auto">
+                            <select class="form-select" id="condicion-borde">
+                                <option value="" disabled selected>Condicion de borde</option>
+                                <option value="1">Empotrada-Empotrada</option>
+                                <option value="2">Empotrada-Articulada</option>
+                                <option value="3">Empotrada-Libre</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary mb-3" id="btn-cargar-barra">Cargar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <h4>Barras</h4>
+        </div>
+        <div class="row">
+            <table class="responsive-table striped centered" id="table-barras">
+                <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>Long</th>
+                        <th>E</th>
+                        <th>b</th>
+                        <th>h</th>
+                        <th>Cond. Borde</th>
+                        <th>q</th>
+                    </tr>
+                </thead>
+        
+                <tbody>
+                    <tr>
+                    <td>1</td>
+                    <td>10</td>
+                    <td>210</td>
+                    <td>5</td>
+                    <td>2</td>
+                    <td>E-E</td>
+                    <td>30</td>
+                    </tr>
+                </tbody>
+                </table>
+        </div>
+    </div>
+
+    <!--Bootstrap-->
+    <script src="css/bootstrap/bootstrap.min.js"></script>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="css/materialize/js/materialize.min.js"></script>
+
+    <!--Logica-->
+    <script src="js/logica.js"></script>
+
+</body>
+</html>
