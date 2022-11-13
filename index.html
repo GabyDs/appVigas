@@ -45,7 +45,7 @@
                 <h4>Datos de la Barra</h4>
             </div>
             <div class="col-auto">
-                <form class="datos-barras">
+                <form id="datos-barras">
                     <div class="row">
                         <div class="col-auto">
                             <input type="text" class="form-control" id="long-barra" placeholder="Longitud de la barra">
@@ -88,7 +88,6 @@
             <table class="responsive-table striped centered" id="table-barras">
                 <thead>
                     <tr>
-                        <th>N°</th>
                         <th>Long</th>
                         <th>E</th>
                         <th>b</th>
@@ -98,16 +97,7 @@
                     </tr>
                 </thead>
         
-                <tbody>
-                    <tr>
-                    <td>1</td>
-                    <td>10</td>
-                    <td>210</td>
-                    <td>5</td>
-                    <td>2</td>
-                    <td>E-E</td>
-                    <td>30</td>
-                    </tr>
+                <tbody id="tabla-barras">
                 </tbody>
                 </table>
         </div>
