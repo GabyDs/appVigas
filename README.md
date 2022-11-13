@@ -1,3 +1,3 @@
 # Aplicacion Vigas
 
-## Se utilizara para el calculo de 'momentos' en vigas.
+## Se utilizara para el Metodo de Cross en vigas
