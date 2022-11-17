@@ -3,13 +3,16 @@ var Datastore = require('nedb')
 // Persistent datastore with automatic loading
 let db = new Datastore({filename: 'db/registro.db', autoload: true})
 
-exports.agregarBarra = function(longitud, elasticidad, base, altura,condicionBorde, cargaDist) {
+exports.agregarBarra = function(longitud, elasticidad, base, altura, inercia, condicionBorde, rigidez, transmision, cargaDist) {
     var barra = {
         longitud: longitud,
         elasticidad: elasticidad,
         base: base,
         altura: altura,
+        inercia: inercia,
         condicionBorde: condicionBorde,
+        rigidez: rigidez,
+        transmision: transmision,
         cargaDist: cargaDist,
     }
 
@@ -29,5 +32,13 @@ exports.obtenerBarras = function (operacion) {
 exports.eliminarBarra = function(id) {
     db.remove({_id: id}, {}, function(err, numeroRegistrosEliminados) {
 
+    })
+}
+
+exports.contarBarras = function(fn) {
+    db.count({}, function(err, count) {
+        if (count) {
+            fn(count)
+        }
     })
 }

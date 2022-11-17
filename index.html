@@ -26,20 +26,6 @@
                 <h1>Metodo de Cross</h1>
             </div>
         </div>
-        <!--
-            CREO QUE NO VA A HACER FALTA
-        <form class="row form-cant-barras">
-            <div class="col-auto">
-              <input type="text" readonly class="form-control-plaintext" value="Cantidad de Barras:">
-            </div>
-            <div class="col-auto">
-              <input type="text" class="form-control" id="input-cant-barras">
-            </div>
-            <div class="col-auto">
-              <button type="submit" class="btn btn-primary mb-3" id="btn-cant-barras">Confirmar</button>
-            </div>
-        </form>
-        -->
         <div class="row">
             <div class="col-auto">
                 <h4>Datos de la Barra</h4>
@@ -85,14 +71,17 @@
             <h4>Barras</h4>
         </div>
         <div class="row">
-            <table class="responsive-table striped centered" id="table-barras">
+            <table class="responsive-table striped centered">
                 <thead>
                     <tr>
                         <th>Long.</th>
                         <th>Mod. elas.</th>
                         <th>Base</th>
                         <th>Altura</th>
+                        <th>Coef. Inercia</th>
                         <th>Cond. Borde</th>
+                        <th>Coef. Rigidez</th>
+                        <th>Coef. Transmision</th>
                         <th>Carga dist.</th>
                         <th>Eliminar</th>
                     </tr>
@@ -100,7 +89,12 @@
         
                 <tbody id="tabla-barras">
                 </tbody>
-                </table>
+            </table>
+        </div>
+        <div class="row">
+            <div class="col-auto">
+                <button type="button" class="btn btn-primary mt-3" id="button-cross" onclick="gestorApp.metodoCross()">Cross</button>
+            </div>
         </div>
     </div>
 

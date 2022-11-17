@@ -27,7 +27,7 @@ def CargaE (Barra): #modulo de elasticidad en [Gpa]
             Barra[i][1]=E
     elif E_bool == "No" or E_bool== "no":
         for i in range(len(Barra)):
-            Barra[i][1] = float(input("Inserte el valor de E de la barra{}:  ").format(i+1))
+            Barra[i][1] = float(input("Inserte el valor de E de la barra{i}:  ").format(i+1))
             
 
 def CargaDimensiones (Barra): #Carga de dimensiones [cm]
@@ -81,7 +81,7 @@ def CargaDistribuida (Barra): #Carga de carga distruida "q"
     for i in range(len(Barra)):
         Barra[i][6]= float(input("Inserte carga distribuida de la barra {}:  ".format(i)))
 
-
+# todavia no
 def CargaPuntual (Barra):
     Barra[i][7][0]= float(input("Inserte distancia del nodo {} de la carga puntual de la barra {}:  ".format(i+1,Barra[i])))
     Barra[i][8][1]= float(input("Inserte carga distribuida de la barra {}:  ".format(Barra[i])))
@@ -274,9 +274,6 @@ BalNodal=Nodos.copy()
 Transporte=[]
 Gamma=Nodos.copy()
 
-    
-    
-    
 #Muestra la lista vacia
 for i in range(len(Barra)):
     print(Barra[i])
